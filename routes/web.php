@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/single', function () {
-    return view('frontend.single');
-});
+Route::get('/category/{slug}', 'HomeController@categoryListing')->name('category.list');
+
+Route::get('/cart', 'CartController@showCart')->name('cart');
+Route::get('/checkout', 'CartController@showCheckout')->name('checkout');
+
+Route::get('/product/{slug}', 'HomeController@showProduct')->name('product.show');
+
+
