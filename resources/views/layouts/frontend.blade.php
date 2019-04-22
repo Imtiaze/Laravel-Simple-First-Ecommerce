@@ -4,9 +4,7 @@
 
   <!-- Page Content -->
   <div class="container">
-
     <div class="row">
-
       
         @include('partials._sidebar')
       <!-- /.col-lg-3 -->
